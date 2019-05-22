@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    show-sql: true
+---
+spring:
+  profiles: mysql
+  datasource:
+    url: jdbc:mysql://localhost/test
+    username: dbuser
+    password: dbpass
+    pool-size: 30
+---
+spring:
+  profiles: aws
+  datasource:
+    url: jdbc:mysql://localhost/test
+    username: set
+    password: set
+    pool-size: 100
