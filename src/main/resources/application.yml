@@ -13,12 +13,4 @@ spring:
     url: jdbc:mysql://url/test?createDatabaseIfNotExist=true
     username: user
     password: password
-    pool-size: 30
----
-spring:
-  profiles: aws
-  datasource:
-    url: jdbc:mysql://localhost/test
-    username: set
-    password: set
     pool-size: 100
