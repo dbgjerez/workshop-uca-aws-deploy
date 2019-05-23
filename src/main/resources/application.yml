@@ -4,10 +4,15 @@ spring:
 ---
 spring:
   profiles: mysql
+  jpa:
+    naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: create
   datasource:
-    url: jdbc:mysql://localhost/test
-    username: dbuser
-    password: dbpass
+    url: jdbc:mysql://url/test?createDatabaseIfNotExist=true
+    username: user
+    password: password
     pool-size: 30
 ---
 spring:
